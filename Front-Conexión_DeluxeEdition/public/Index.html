@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante</title>
+    <link rel="stylesheet" href="./CSS/Estilos.css">
+    <script src="./JS/js.js" defer></script>
+    
+</head>
+<body>
+    <header> <h1>Restaurante</h1></header>
+
+<form  id="Formulario" action="/registrar" method="post">
+    <label for="tipo">Tipo de orden</label>
+    <select name="Tipo" id="Tipo" onchange="actualizarOpciones()" required>
+         <option value="">--Seleccione una categoría--</option>
+        <option value="Bebidas">Bebidas</option>
+        <option value="Comidas">Comidas</option>
+    </select>
+    <label for="producto">Selecione su producto</label>
+    <select name="Producto" id="Producto" required>
+        <option value="">--Seleccione su producto--</option>
+    </select>
+    <label for="Mesa">Seleccione su mesa</label>
+    <select name="mesa" id="Mesa" required>
+        <option value="">--Mesas disponibles--</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+    </select>
+    <label for="Cliente">Tipo de cliente</label>
+    <Select id="Cliente" name="tipocliente" required>
+        <option value="">--Tipo de cliente--</option>
+        <option value="Nuevo">Cliente nuevo</option>
+        <option value="Recurrente">Cliente recurrente</option>
+    </Select>
+    <button type="submit" onclick= "finalizarPedido()">Finalizar pedido</button>
+    <button type="button" onclick="agregarOrden()">Agregar al pedido</button>
+    
+</form>
+<h2>Lista de Ordenes</h2>
+<ul id="listaOrdenes"></ul>
+
+</body>
+</html>
